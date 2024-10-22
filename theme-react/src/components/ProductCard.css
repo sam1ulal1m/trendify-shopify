@@ -1,0 +1,33 @@
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+.product-card {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .product-card img {
+    max-width: 200px;
+    height: auto;
+    margin-bottom: 10px;
+  }
+  
+  .product-info {
+    text-align: left;
+  }
+  
+  .product-info h3 {
+    margin-bottom: 5px;
+  }
+  
+  .product-info a {
+    color: blue;
+    text-decoration: none;
+  }

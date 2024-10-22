@@ -1,3 +1,28 @@
-# This file stores configurations for your Shopify app.
+# Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
 
-scopes = "write_products"
+client_id = "bc2e63af6c5b61937bd91bd9490511fd"
+name = "dyn-sa"
+handle = "dyn-sa"
+application_url = "https://shopify.dev/apps/default-app-home"
+embedded = true
+
+[build]
+automatically_update_urls_on_dev = true
+dev_store_url = "dyn-sa-3.myshopify.com"
+
+[access_scopes]
+# Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
+scopes = "read_assigned_fulfillment_orders,read_checkouts,read_content,read_customers,read_discounts,read_draft_orders,read_files,read_fulfillments,read_gift_cards,read_inventory,read_legal_policies,read_locations,read_markets,read_merchant_managed_fulfillment_orders,read_orders,read_price_rules,read_product_listings,read_products,read_returns,read_themes,read_third_party_fulfillment_orders,write_assigned_fulfillment_orders,write_checkouts,write_content,write_customers,write_discounts,write_draft_orders,write_files,write_fulfillments,write_gift_cards,write_inventory,write_markets,write_merchant_managed_fulfillment_orders,write_orders,write_price_rules,write_products,write_themes,write_third_party_fulfillment_orders"
+
+[auth]
+redirect_urls = [
+  "https://shopify.dev/apps/default-app-home/api/auth",
+  "https://when-collectible-ct-need.trycloudflare.com/token",
+  "https://when-collectible-ct-need.trycloudflare.com/install"
+]
+
+[webhooks]
+api_version = "2024-04"
+
+[pos]
+embedded = false

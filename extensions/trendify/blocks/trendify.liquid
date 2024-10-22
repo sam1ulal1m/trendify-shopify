@@ -1,0 +1,14 @@
+<script
+  async
+  src="{{ 'trendify.js' | asset_url }}"
+></script>
+<script>
+  window.currentProduct =  {{ product | json }};
+</script>
+<div id="trendify-app-block">Trendify </div>
+{% schema %}
+{
+  "name": "Trendify recommendations",
+  "target": "section"
+}
+{% endschema %}
