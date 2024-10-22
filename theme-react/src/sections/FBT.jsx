@@ -9,7 +9,7 @@ const FBT = () => {
         const fetchRecommendedProducts = async () => {
             setLoading(true)
             try {
-                const response = await fetch(`https://trendify99-722133f42363.herokuapp.com/api/products-by-handle?handle=${handle}&shop=${window?.Shopify?.shop}`)
+                const response = await fetch(`https://doll-suzuki-space-items.trycloudflare.com/api/products-by-handle?handle=${handle}&shop=${window?.Shopify?.shop}`)
                 const data = await response.json()
                 setRecommendedProducts(data)
             } catch (error) {

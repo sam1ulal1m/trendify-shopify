@@ -4,6 +4,7 @@ import useRecommendations from './hooks/useRecommendation'
 import ProductCarousel from './components/ProductCarousel'
 import Recommendation from './sections/Recommendation'
 import FBT from './sections/FBT'
+import { ProductList } from './components/ManualProducts'
 
 function App() {
   const [recommendation, setRecommendation] = useState(null)
@@ -17,7 +18,7 @@ function App() {
     async function fetchRecommendation() {
       setLoading(true)
       try {
-        const response = await fetch('https://trendify99-722133f42363.herokuapp.com/api/trendify?' + `productId=gid://shopify/Product/${window?.currentProduct?.id}&shop=${window?.Shopify?.shop}`)
+        const response = await fetch('https://doll-suzuki-space-items.trycloudflare.com/api/trendify?' + `productId=gid://shopify/Product/${window?.currentProduct?.id}&shop=${window?.Shopify?.shop}`)
         const data = await response.json()
         if (isMounted) {
           setRecommendation(data)
@@ -60,7 +61,7 @@ function App() {
     case 'manual':
     return (
       <>
-        Manual recommendations
+        <ProductList products={recommendation?.products} />
       </>
     )
 

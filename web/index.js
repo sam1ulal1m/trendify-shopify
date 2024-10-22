@@ -107,12 +107,11 @@ app.get("/api/trendify", async (_req, res) => {
   try {
     const shop = _req.query.shop;
     const recomendations = await Recommendations.find({ shop });
-    console.log("recomendations", JSON.stringify(recomendations));
     const recommendation = recomendations.find(recomendation => recomendation.products?.some(product => product.id === _req.query.productId));
     if (recommendation?.type === "automatic") {
       res.status(200).json({ type: "automatic", products: [] });
     } else if (recommendation?.type === "manual") {
-      res.status(200).json({ type: "manual", products: [] });
+      res.status(200).json({ type: "manual", products: recommendation?.recommendedProducts});
     } else if (recommendation?.type === "frequently_bought_together") {
       res.status(200).json({ type: "frequently_bought_together", products: [] });
     } else {
