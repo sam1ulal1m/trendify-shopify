@@ -17,7 +17,7 @@ function App() {
     async function fetchRecommendation() {
       setLoading(true)
       try {
-        const response = await fetch('https://warriors-portfolio-specified-hunt.trycloudflare.com/api/trendify?' + `productId=gid://shopify/Product/${window?.currentProduct?.id}&shop=${window?.Shopify?.shop}`)
+        const response = await fetch('https://trendify99-722133f42363.herokuapp.com/api/trendify?' + `productId=gid://shopify/Product/${window?.currentProduct?.id}&shop=${window?.Shopify?.shop}`)
         const data = await response.json()
         if (isMounted) {
           setRecommendation(data)

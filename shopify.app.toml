@@ -3,12 +3,13 @@
 client_id = "bc2e63af6c5b61937bd91bd9490511fd"
 name = "dyn-sa"
 handle = "dyn-sa"
-application_url = "https://shopify.dev/apps/default-app-home"
+application_url = "https://trendify99-722133f42363.herokuapp.com"
 embedded = true
 
 [build]
 automatically_update_urls_on_dev = true
 dev_store_url = "dyn-sa-3.myshopify.com"
+include_config_on_deploy = true
 
 [access_scopes]
 # Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
@@ -16,9 +17,9 @@ scopes = "read_assigned_fulfillment_orders,read_checkouts,read_content,read_cust
 
 [auth]
 redirect_urls = [
-  "https://shopify.dev/apps/default-app-home/api/auth",
-  "https://when-collectible-ct-need.trycloudflare.com/token",
-  "https://when-collectible-ct-need.trycloudflare.com/install"
+  "https://trendify99-722133f42363.herokuapp.com/api/auth",
+  "https://trendify99-722133f42363.herokuapp.com/token",
+  "https://trendify99-722133f42363.herokuapp.com/install"
 ]
 
 [webhooks]
